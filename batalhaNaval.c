@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#define linhas 10
+#define colunas 10
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
@@ -49,6 +50,18 @@ int main() {
             tabuleiro[i][6] = 3;
         }
     
+    for (int k = 0; k < 3; k++)
+        {
+            tabuleiro[5 + k][0 + k] = 3;
+        }
+    
+    for (int l = 0; l < 3; l++)
+        {
+            tabuleiro[0 + l][9 - l] = 3;
+        }   
+    
+
+
     printf("  "); // ESPAÇO PARA QUE AS LETRAS FIQUEM CORRETAMENTE EM CIMA DE CADA COLUNA
     for (int i = 0; i < 10; i++)
     {    
@@ -67,7 +80,51 @@ int main() {
             printf("%d ", tabuleiro[i][j]); // PRINTF DA MATRIZ 10X10 
         }
             printf("\n");
-    }   
+    }  
 
-    return 0;
-}
+
+    /*int matriz[linhas][colunas] = {0};
+
+
+     for (int j = 3; j < 3 + 3; j++) // DEFINIÇÃO DA LOCALIZAÇÃO DO 1° NAVIO
+        {
+            matriz[3][j] = 3; 
+        }
+
+     for (int i = 6; i < 6 + 3; i++) // DEFINIÇÃO DA LOCALIZAÇÃO DO 2° NAVIO
+        {
+            matriz[i][6] = 3;
+        }
+
+
+        printf("  "); // ESPAÇO PARA QUE AS LETRAS FIQUEM CORRETAMENTE EM CIMA DE CADA COLUNA
+    for (int i = 0; i < 10; i++)
+    {    
+        printf("%c ", 'A' + i); // PRINTF, COM A UTILIZAÇÃO DA TABELA ASCII PARA REALIZAR IDENTIFICAÇÃO DAS COLUNAS
+       
+    }   printf("\n");
+    
+    
+    for (int i = 0; i < 10; i++)
+    {  
+        printf("%d ", i); // PRINTF DA NÚMERAÇÃO DE CADA LINHA 
+        
+        for (int j = 0; j < 10; j++)
+        {  
+        
+            printf("%d ", matriz[i][j]); // PRINTF DA MATRIZ 10X10 
+        }
+            printf("\n");
+    }   
+        */
+
+
+
+        return 0;
+    }
+    
+
+
+    
+    
+
