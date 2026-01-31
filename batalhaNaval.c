@@ -36,5 +36,38 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    int tabuleiro [10][10] = {0}; // MATRIZ
+
+
+     for (int j = 3; j < 3 + 3; j++) // DEFINIÇÃO DA LOCALIZAÇÃO DO 1° NAVIO
+        {
+            tabuleiro[3][j] = 3; 
+        }
+
+     for (int i = 6; i < 6 + 3; i++) // DEFINIÇÃO DA LOCALIZAÇÃO DO 2° NAVIO
+        {
+            tabuleiro[i][6] = 3;
+        }
+    
+    printf("  "); // ESPAÇO PARA QUE AS LETRAS FIQUEM CORRETAMENTE EM CIMA DE CADA COLUNA
+    for (int i = 0; i < 10; i++)
+    {    
+        printf("%c ", 'A' + i); // PRINTF, COM A UTILIZAÇÃO DA TABELA ASCII PARA REALIZAR IDENTIFICAÇÃO DAS COLUNAS
+       
+    } printf("\n");
+    
+    
+    for (int i = 0; i < 10; i++)
+    {  
+        printf("%d ", i); // PRINTF DA NÚMERAÇÃO DE CADA LINHA 
+        
+        for (int j = 0; j < 10; j++)
+        {  
+        
+            printf("%d ", tabuleiro[i][j]); // PRINTF DA MATRIZ 10X10 
+        }
+            printf("\n");
+    }   
+
     return 0;
 }
